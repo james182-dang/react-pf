@@ -14,16 +14,16 @@ function Nav(props) {
         document.title = capitalizeFirstLetter(currentCategory.name);
     }, [currentCategory]);
 
-    return(
-        <header>
+    return (
+        <header className='flex-row px-1'>
             <h2>
                 <a href="/">
                     <span role="img" aria-label="laptop"> 💻</span>James Lindsey
                 </a>
             </h2>
             <nav>
-                <ul>
-                    <li>
+                <ul className='flex-row'>
+                    <li className={`mx-2 ${contactSelected && 'navActive'}`}>
                         <a href="#about" onClick={() => setContactSelected(false)}>
                             About me
                         </a>
@@ -33,7 +33,7 @@ function Nav(props) {
                     </li>
                     {categories.map((category) => (
                         <li
-                          className={`${currentCategory.name === category.name && !contactSelected && `navActive`
+                          className={`mx-1 ${currentCategory.name === category.name && !contactSelected && `navActive`
                         }`}
                         key={category.name}
                         >

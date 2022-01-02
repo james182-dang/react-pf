@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './style.css';
 import About from './components/About';
 import Nav from './components/Navigation';
 import ContactForm from './components/Contact';
@@ -11,16 +10,16 @@ function App() {
   const [contactSelected, setContactSelected] = useState(false);
   const [categories] = useState([
     {
-      name: 'about',
-      description: 'About James Lindsey'
+      name: 'Single-Page Websites',
+      description: 'Single-Page websites'
     },
     {
-      name: 'projects',
-      description: 'A list of my smaller projects.'
+      name: 'Multi-Page-Websites',
+      description: 'A list of multi-page websites.'
     },
     {
-      name: 'full projects',
-      description: 'A list of full, functioning projects built from the ground up.'
+      name: 'Utilities',
+      description: 'Utilities'
     }
   ]);
 
